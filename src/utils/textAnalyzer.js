@@ -16,7 +16,7 @@ export function calculateTextStats(text) {
   }
 
   // Calculate statistics
-  const characters = text.length;
+  const characters = text.replace(/(\r\n|\n|\r)/gm, "").length;
   const charactersNoSpaces = text.replace(/\s/g, '').length;
   
   // Words are sequences of characters separated by whitespace
